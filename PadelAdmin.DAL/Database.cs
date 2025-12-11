@@ -21,7 +21,7 @@ namespace PadelAdmin.DAL
             get
             {
 
-                if(instance == null)
+                if (instance == null)
                 {
 
                     instance = new Database();
@@ -34,14 +34,13 @@ namespace PadelAdmin.DAL
 
         }
 
+        /// <summary>
+        /// Devuelve una conexión cerrada.
+        /// </summary>
         public SqlConnection GetConnection()
         {
 
-            SqlConnection conn = new SqlConnection(connectionString);
-
-            conn.Open();
-
-            return conn;
+            return new SqlConnection(connectionString);
 
         }
 
